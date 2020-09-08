@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace K3CloudAPI.Model.Globa
+namespace Dev.K3CloudAPI.Model.Globa
 {
     public class LocalInfo
     {

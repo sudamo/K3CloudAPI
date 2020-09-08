@@ -5,15 +5,14 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("K3CloudAPI")]
+[assembly: AssemblyTitle("frmTest")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("dm")]
-[assembly: AssemblyProduct("K3CloudAPI")]
+[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyProduct("frmTest")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: SuppressIldasm()]
 
 //将 ComVisible 设置为 false 将使此程序集中的类型
 //对 COM 组件不可见。  如果需要从 COM 访问此程序集中的类型，
@@ -21,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("60237e44-1d7e-472a-a4a2-0f687919eb24")]
+[assembly: Guid("8a6d744c-b735-41b1-9bb4-8a7417fa8e04")]
 
 // 程序集的版本信息由下列四个值组成: 
 //

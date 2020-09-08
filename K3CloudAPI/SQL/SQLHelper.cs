@@ -25,7 +25,7 @@
  * 
  **/
 
-namespace K3CloudAPI.SQL
+namespace Dev.K3CloudAPI.SQL
 {
     using System;
     using System.Data;
@@ -271,6 +271,29 @@ namespace K3CloudAPI.SQL
             }
             return dt;
         }
+        public static DataTable ExecuteTable(string pConnectionString, string pCommandText, SqlParameter[] pParameters)
+        {
+            DataTable dt = new DataTable();
+            SqlConnection conn = new SqlConnection(pConnectionString);
+            try
+            {
+                conn.Open();
+                SqlDataAdapter adp = new SqlDataAdapter(pCommandText, conn);
+                foreach (SqlParameter parm in pParameters)
+                {
+                    adp.SelectCommand.Parameters.Add(parm);
+                }
+                adp.Fill(dt);
+                adp.SelectCommand.Parameters.Clear();
+            }
+            catch { return null; }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                    conn.Close();
+            }
+            return dt;
+        }
         public static DataTable ExecuteTable(string pCommandText)
         {
             DataTable dt = new DataTable();
@@ -305,6 +328,44 @@ namespace K3CloudAPI.SQL
                 adp.SelectCommand.Parameters.Clear();
             }
             catch { return null; }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                    conn.Close();
+            }
+            return dt;
+        }
+        public static DataTable ExecuteTable(CommandType pCommandType, string pCommandText, SqlParameter[] pParameters)
+        {
+            DataTable dt = new DataTable();
+            SqlConnection conn = new SqlConnection(GlobalParameter.SQLInf.ConnectionString);
+            SqlDataAdapter adp = new SqlDataAdapter();
+            SqlCommand cmd = conn.CreateCommand();
+
+            try
+            {
+                conn.Open();
+                adp.SelectCommand = cmd;
+                adp.SelectCommand.CommandText = pCommandText;
+                adp.SelectCommand.CommandType = pCommandType;
+
+                if (pCommandType == CommandType.StoredProcedure)
+                    adp.SelectCommand.CommandTimeout = 10000;
+                else
+                    adp.SelectCommand.CommandTimeout = 500;
+
+                if (pParameters != null)
+                {
+                    foreach (SqlParameter parm in pParameters)
+                        adp.SelectCommand.Parameters.Add(parm);
+                }
+                adp.Fill(dt);
+                adp.SelectCommand.Parameters.Clear();
+            }
+            catch
+            {
+                throw;
+            }
             finally
             {
                 if (conn.State == ConnectionState.Open)

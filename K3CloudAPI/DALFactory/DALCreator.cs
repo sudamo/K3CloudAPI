@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace K3CloudAPI.DALFactory
+namespace Dev.K3CloudAPI.DALFactory
 {
     using IDAL;
     using SQL;

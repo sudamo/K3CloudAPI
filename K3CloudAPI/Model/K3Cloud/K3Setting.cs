@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace K3CloudAPI.Model.K3Cloud
+namespace Dev.K3CloudAPI.Model.K3Cloud
 {
     public class K3Setting : UserInfo
     {

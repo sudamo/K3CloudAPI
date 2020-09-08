@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace K3CloudAPI.Model.Basic
+namespace Dev.K3CloudAPI.Model.Basic
 {
     /// <summary>
     /// SQLServer配置
