@@ -7,7 +7,7 @@ using Microsoft.Win32;
 using Kingdee.BOS.WebApi.Client;
 using Newtonsoft.Json.Linq;
 
-namespace Dev.K3CloudAPI.SQL
+namespace Dev.K3Api.SQL
 {
     using Model.Globa;
     using IDAL;

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 
-namespace Dev.K3CloudAPI.IDAL
+namespace Dev.K3Api.IDAL
 {
     internal interface IComFunc
     {

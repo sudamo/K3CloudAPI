@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 
-namespace Dev.K3CloudAPI
+namespace Dev.K3Api
 {
     using Model.Globa;
     using Model.Basic;

@@ -25,7 +25,7 @@
  * 
  **/
 
-namespace Dev.K3CloudAPI.SQL
+namespace Dev.K3Api.SQL
 {
     using System;
     using System.Data;

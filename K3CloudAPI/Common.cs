@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace Dev.K3CloudAPI
+namespace Dev.K3Api
 {
     using SQL;
 

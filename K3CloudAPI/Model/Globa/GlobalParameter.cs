@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Dev.K3CloudAPI.Model.Globa
+namespace Dev.K3Api.Model.Globa
 {
     using Basic;
     using K3Cloud;
